@@ -3,9 +3,9 @@ App::uses('AppHelper', 'View/Helper');
 
 class SignatureToImageHelper extends AppHelper {
    
-    public $helpers = array('Html', 'Form');
+   public $helpers = array('Html', 'Form');
    
-   public function accept() {
+   public function accept($id = null) {
 
         $html = array();
        
@@ -14,11 +14,11 @@ class SignatureToImageHelper extends AppHelper {
         $html[] = $this->Html->script('SignatureImage.jquery.1.7.1');   
 
         $html[] = '<div class="sigPad">
-					  <div class="sig sigWrapper">
-					    <div class="typed"></div>
-					    <canvas class="pad" width="198" height="55"></canvas>';
+                    <div class="sig sigWrapper">
+                    <div class="typed"></div>
+                    <canvas class="pad" width="198" height="55"></canvas>';
        
-        $html[] = $this->Form->input('signature',array('type' => 'hidden', 'class' => 'output'));
+        $html[] = $this->Form->input($id, array('type' => 'hidden', 'class' => 'output'));
 
         $html[] = '</div></div>';
 
