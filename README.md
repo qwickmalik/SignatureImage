@@ -44,10 +44,9 @@ $this->SignatureToImage->saveImage($img, $sign_image);
 ```
 
 ## Example :
-**MySQL: **
+**MySQL: ** Structure for signatures table
 
 ```
--- Table structure for table `signatures`
 
 DROP TABLE IF EXISTS `signatures`;
 CREATE TABLE IF NOT EXISTS `signatures` (
@@ -58,6 +57,7 @@ CREATE TABLE IF NOT EXISTS `signatures` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
 ```
+
 
 **Model: ** The code below goes into app/Model/Signature.php
 ```
