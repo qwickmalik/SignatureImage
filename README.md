@@ -27,7 +27,7 @@ Put below code in your `ctp` file. It creates a singaturebox where you can draw 
 **PS: This is where this fork differs from the original plubin by @chetanspeed511987**
 
 ```php
-<?php echo $this->SignatureToImage->accept($id='mySignature'); ?>
+echo $this->SignatureToImage->accept($id='mySignature');
 ```
 
 
@@ -46,7 +46,7 @@ $this->SignatureToImage->saveImage($img, $sign_image);
 ## Example :
 **MySQL: ** Structure for signatures table
 
-```
+```mysql
 
 DROP TABLE IF EXISTS `signatures`;
 CREATE TABLE IF NOT EXISTS `signatures` (
